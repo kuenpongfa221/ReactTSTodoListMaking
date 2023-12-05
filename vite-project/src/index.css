@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border-radius: 8px;
+  margin: 2px;
+  padding: 5px;
+  size: 10px;
+}
+
+table th {
+  padding: 5px;
+}
+
+table tr {
+  align-items: center;
+}
+
+table td {
+  padding: 5px;
+}
