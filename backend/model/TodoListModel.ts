@@ -7,7 +7,7 @@ const todoListSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  owener: {
+  owner: {
     type: String,
     required: true,
   },
@@ -16,7 +16,7 @@ const todoListSchema = new mongoose.Schema({
     required: true,
   },
   complete: {
-    type: Boolean,
+    type: String,
     required: true,
   },
   taskDeadline: {
