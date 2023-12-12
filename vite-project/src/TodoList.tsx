@@ -34,6 +34,8 @@ export default function TodoList() {
     });
   };
 
+  const deleteItem = (id: any) => {};
+
   return (
     <div>
       <button>Add Record</button>
@@ -52,16 +54,26 @@ export default function TodoList() {
         </thead>
         {listOfTodos.map((todo: any) => {
           return (
-            <tbody>
-              <tr>
-                <td>{todo.taskDesc}</td>
-                <td>{todo.priority}</td>
-                <td>{todo.owner}</td>
-                <td>{todo.department}</td>
-                <td>{todo.complete}</td>
-                <td>{todo.taskDeadline}</td>
-              </tr>
-            </tbody>
+            <>
+              <tbody>
+                <tr>
+                  <td>{todo.taskDesc}</td>
+                  <td>{todo.priority}</td>
+                  <td>{todo.owner}</td>
+                  <td>{todo.department}</td>
+                  <td>{todo.complete}</td>
+                  <td>{todo.taskDeadline}</td>
+                </tr>
+              </tbody>
+              <button
+                className="delete-item"
+                onClick={() => {
+                  deleteItem(todo._id);
+                }}
+              >
+                Delete
+              </button>
+            </>
           );
         })}
       </table>

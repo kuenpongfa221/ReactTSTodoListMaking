@@ -20,6 +20,16 @@ app.post("/createTodoList", async (req: Request, res: Response) => {
   const newTodoList = new todoListModel(todoList);
   await newTodoList.save();
 
+  //Delete item from database
+  app.delete("/api/item/:id", async (req, res) => {
+    try {
+      //find the item by its id and delete it
+      const deleteItem = await todoListModel.findByIdAndDelete(req.params.id);
+      res.status(200).json("Item Deleted");
+    } catch (err) {
+      res.json(err);
+    }
+  });
   res.send(newTodoList);
 });
 
