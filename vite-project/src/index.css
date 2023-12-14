@@ -4,11 +4,29 @@
   box-sizing: border-box;
 }
 
+body {
+}
+
+div.TodoList {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1.todoListText {
+  font-size: 48px;
+  margin-top: 50px;
+}
+
 button {
   border-radius: 8px;
   margin: 2px;
   padding: 5px;
   size: 10px;
+}
+
+table {
+  text-align: center;
 }
 
 table th {
@@ -21,4 +39,50 @@ table tr {
 
 table td {
   padding: 5px;
+}
+
+table .noBorder {
+  border-width: 0px;
+}
+
+table .update-new-input {
+  width: 85%;
+}
+
+div.addBox {
+  /* align-items: center; */
+  display: flex;
+  /* justify-content: center; */
+  padding-left: 180px;
+}
+
+div input.addInput {
+  margin-top: 30px;
+  margin-right: 5px;
+  padding: 5px;
+  width: 12%;
+}
+
+div .addButton {
+  margin-top: 30px;
+  background-color: #008080;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.update-item {
+  background-color: goldenrod;
+  color: #fff;
+}
+.delete-item {
+  background-color: red;
+  color: #fff;
+}
+.update-new-btn {
+  background-color: darkorchid;
+  color: #fff;
+  cursor: pointer;
 }
